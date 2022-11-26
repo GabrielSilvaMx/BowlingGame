@@ -30,15 +30,15 @@ pipeline {
             steps {
                 echo 'Deploy'
                 sh '''
-                    for runName in `docker ps | grep "alpine-petclinic" | awk '{print $1}'`
+                    for runName in `docker ps | grep "BowlingGame" | awk '{print $1}'`
                     do
                         if [ "$runName" != "" ]
                         then
                             docker stop $runName
                         fi
                     done
-                    docker build -t alpine-petclinic -f Dockerfile.deploy .
-                    docker run --name alpine-petclinic --rm -d -p 9966:8080 alpine-petclinic
+                    docker build -t BowlingGame -f Dockerfile.deploy .
+                    docker run --name BowlingGame --rm -d -p 9966:8080 BowlingGame
                 '''
             }
         }
