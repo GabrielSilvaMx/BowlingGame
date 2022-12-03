@@ -49,8 +49,8 @@ pipeline {
                             docker stop $runName
                         fi
                     done
-                    docker build -t BowlingGame -f Dockerfile.deploy .
-                    docker run --name BowlingGame --rm -d -p 9966:8080 BowlingGame
+                    docker build -t bowlinggame -f Dockerfile.deploy .
+                    docker run --name bowlinggame --rm -d -p 9966:8080 bowlinggame
                 '''
             }
         }
