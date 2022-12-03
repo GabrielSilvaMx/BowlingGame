@@ -29,6 +29,7 @@
                                <format>ALL</format>
                                <failBuildOnCVSS>1</failBuildOnCVSS>
                                <cveValidForHours>1</cveValidForHours>
+                               <skipProvidedScope>true</skipProvidedScope>
                            </configuration>
                            <executions>
                                <execution>
